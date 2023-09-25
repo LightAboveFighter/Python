@@ -159,7 +159,7 @@ grid = [
 print(compute_unique_pathes(grid), " -  Task 5")
 #assert compute_unique_pathes(grid) == 2
 
-# Task 6 ===========================================================
+# Task 6 ==========================================================
 
 def jump(jumps: list[int]) -> int:
     
