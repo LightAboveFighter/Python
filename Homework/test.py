@@ -1,15 +1,9 @@
-def jump(jumps: list[int]) -> int:
-    
-    paths = [10000] * len(jumps)
-    paths[0] = 0
+comands = ['cd', 'ls', 'git']
 
-    for i in range(len(jumps) - 1):
-        for j in range(jumps[i]):
-            if j < len(jumps):
-                paths[i + j + 1] = min(paths[i + j + 1], paths[i] + 1)
-    print(paths)
-    print(jumps)
-    return paths[-1]
-
-jumps = [4, 1, 1, 1, 4, 1, 1, 1, 100]
-print(jump(jumps))
+for i in range(len(comands)):
+        for j in range(len(comands[i])):
+            check_str = ''
+            for k in range(len(comands[i])):
+                if k != j:
+                     check_str += comands[i][k]
+            print(check_str)
