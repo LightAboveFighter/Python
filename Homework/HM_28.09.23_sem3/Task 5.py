@@ -1,4 +1,6 @@
 def compute_unique_pathes(grid:list[list[int]]) -> int:
+    if grid[-1][-1] == 1:
+        return 0
     grid_copy = grid[:]
     grid_copy[0][0] = -1
 

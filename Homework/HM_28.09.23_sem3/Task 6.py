@@ -5,7 +5,7 @@ def jump(jumps: list[int]) -> int:
 
     for i in range(len(jumps) - 1):
         for j in range(jumps[i]):
-            if j < len(jumps):
+            if i + j + 1 < len(jumps):
                 paths[i + j + 1] = min(paths[i + j + 1], paths[i] + 1)
     return paths[-1]
 
