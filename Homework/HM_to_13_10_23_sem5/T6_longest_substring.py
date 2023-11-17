@@ -32,11 +32,13 @@ def lengthOfLongestSubstring(s: str) -> int:
                 длина максимального особого подслова 
     """
     cnt = 0
+    if len(s) < 3:
+        return len(set(s))
     
     for i in range(len(s)-1):
         for j in range(i+1, len(s)):
-                if len(s[i:j]) == len(set(s[i:j])):
-                    cnt = max(cnt, len(s[i:j]))
+            if len(s[i:j]) == len(set(s[i:j])):
+                cnt = max(cnt, len(s[i:j]))
     return cnt
 
 
@@ -45,3 +47,4 @@ if __name__ == "__main__":
     assert lengthOfLongestSubstring('bbbbb') == 1
     assert lengthOfLongestSubstring('pwwkew') == 3     # 'pwke' является подпоследовательностью, 
                                                        # но не подсловом
+print(lengthOfLongestSubstring(" "), lengthOfLongestSubstring("au"))

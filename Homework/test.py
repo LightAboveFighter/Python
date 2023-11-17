@@ -1,16 +1,18 @@
-def intToRoman(num: int) -> str:
-    msv = [ int( list(str(num))[i] ) for i in range(len(str(num)) ) ]
-    ans = ''
-    Romans1 = ( 1:"I", 2:"II", 3:"III", 4:"IV", 5:"V", 6:"VI", 7:"VII", 8:"VIII", 9:"IX", 10:"X")
-    Romans2 = ( 4="IV", 9="IX" )
-    
-    for i in range(len(msv)):
-        case_part = 0
-        if msv[i] in [1, 2, 3]:
-            case_part = 1
-        if msv[i] in [4, 9]:
-            case_part = 2
-        else:
-            case_part = 3
-        
-        ans.append
+# base_line = ["0"]*3
+# base_block = [base_line]*3
+# glob_line = [base_block]*3
+# field = [glob_line]*3
+# print(*field)
+
+# def visualize(field: list[list[list[int]]] ):
+
+#     for i in range(3):
+#         for j in range(3):
+#             for k in range(3):
+#                 line = " | ".join(field[i][j][k])
+#                 print(line)
+#         print()
+
+# visualize(field)
+a = [1, 2, 3, 4]
+print(map(a**2))
